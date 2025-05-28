@@ -233,44 +233,46 @@
         </div>
     </section>
     <!-- Contato Section -->
-    <section id="contato" class="section contato">
-        <div class="container">
-            <div class="contato-container">
-                <div class="contato-info">
-                    <h2>Pronto para transformar seu negócio?</h2>
-                    <p>Entre em contato conosco para uma conversa inicial sem compromisso. Vamos entender seus desafios e mostrar como podemos ajudar sua empresa a alcançar resultados extraordinários.</p>
-                    <div class="contato-cta mt-3">
-                        <a href="#" class="btn btn-secondary">Agende uma avaliação gratuita</a>
-                    </div>
-                </div>               
-                <div class="contato-form">
-                    <form id="form-contato">
-                        <div class="form-group">
-                            <label for="nome" class="form-label">Nome</label>
-                            <input type="text" id="nome" class="form-control" required>
-                        </div>                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">E-mail</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>                       
-                        <div class="form-group">
-                            <label for="telefone" class="form-label">Telefone</label>
-                            <input type="tel" id="telefone" class="form-control">
-                        </div>                      
-                        <div class="form-group">
-                            <label for="empresa" class="form-label">Empresa</label>
-                            <input type="text" id="empresa" class="form-control">
-                        </div>                       
-                        <div class="form-group">
-                            <label for="mensagem" class="form-label">Mensagem</label>
-                            <textarea id="mensagem" class="form-control" required></textarea>
-                        </div>                      
-                        <button type="submit" class="btn btn-primary">Enviar mensagem</button>
-                    </form>
+<section id="contato" class="section contato">
+    <div class="container">
+        <div class="contato-container">
+            <div class="contato-info">
+                <h2>Pronto para transformar seu negócio?</h2>
+                <p>Entre em contato conosco para uma conversa inicial sem compromisso. Vamos entender seus desafios e mostrar como podemos ajudar sua empresa a alcançar resultados extraordinários.</p>
+                <div class="contato-cta mt-3">
+                    <a href="#" class="btn btn-secondary">Agende uma avaliação gratuita</a>
                 </div>
+            </div>               
+            <div class="contato-form">
+                <form action="https://formsubmit.co/ro.consultoria@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://QRConsultoria.github.io/obrigado.html">
+
+                    <div class="form-group">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" name="nome" id="nome" class="form-control" required>
+                    </div>                        
+                    <div class="form-group">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                    </div>                       
+                    <div class="form-group">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" class="form-control">
+                    </div>                      
+                    <div class="form-group">
+                        <label for="empresa" class="form-label">Empresa</label>
+                        <input type="text" name="empresa" id="empresa" class="form-control">
+                    </div>                       
+                    <div class="form-group">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem" class="form-control" required></textarea>
+                    </div>                      
+                    <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
