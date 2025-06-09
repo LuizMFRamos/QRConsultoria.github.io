@@ -1,310 +1,169 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramos & Queiróz Consultoria | Transformamos dados em resultados extraordinários</title>
-    <meta name="description" content="Consultoria especializada em transformação de processos, organização de dados e aceleração de startups. Aumento de 60% em vendas e 150% em qualidade operacional.">
-    
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="visual-elements.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDFs Kiwify</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 12px;
+      margin: 20px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background-color: #007bff;
+      color: white;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .btn {
+      padding: 6px 12px;
+      color: white;
+      background-color: #28a745;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+
+      td {
+        position: relative;
+        padding-left: 50%;
+        border-bottom: 1px solid #ddd;
+      }
+
+      td::before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #555;
+      }
+
+      td:nth-child(1)::before { content: "Nome:"; }
+      td:nth-child(2)::before { content: "Link:"; }
+      td:nth-child(3)::before { content: "Download:"; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-container container">
-            <a href="#" class="logo">R.<span>O</span></a>
-            <nav>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="#sobre" class="nav-link">Sobre nós</a></li>
-                    <li class="nav-item"><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
-                    <li class="nav-item"><a href="#cases" class="nav-link">Cases</a></li>
-                    <li class="nav-item"><a href="#consultores" class="nav-link">Consultores</a></li>
-                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+  <div class="container">
+    <h2>Lista de PDFs - Kiwify</h2>
+    <input type="text" id="searchInput" placeholder="Digite o nome para buscar..." />
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Transformamos dados em resultados <span class="text-secondary">extraordinários</span></h1>
-                <p class="hero-subtitle">Aumento de 60% em vendas e 150% em qualidade operacional para empresas que buscam excelência</p>
-                <div class="hero-cta">
-                    <a href="#contato" class="btn btn-secondary">Vamos conversar sobre o seu negócio</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <table id="pdfTable">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Link</th>
+          <th>Download</th>
+        </tr>
+      </thead>
+      <tbody id="pdfBody">
+        <!-- Conteúdo gerado dinamicamente -->
+      </tbody>
+    </table>
+  </div>
 
-    <!-- Sobre Section -->
-    <section id="sobre" class="section">
-        <div class="container">
-            <h2 class="section-title">Experiência real para desafios reais</h2>
-            <div class="sobre-content">
-                <p>A R.O Consultoria nasceu da visão de dois profissionais com bagagem sólida em empresas de tecnologia e startups de alto crescimento. Combinamos a experiência operacional de um ex-COO do Rappi Brasil com a expertise analítica de um diretor de dados, criando uma consultoria que entende profundamente os desafios das empresas modernas.</p>
-                
-                <p>Nossa abordagem é prática e orientada a resultados. Não oferecemos apenas relatórios e recomendações teóricas - implementamos soluções, automatizamos processos e transformamos dados em insights acionáveis que impulsionam o crescimento do seu negócio.</p>
-                
-                <p>Com mais de oito anos de experiência em posições de liderança, desenvolvemos uma visão 360° do mercado e criamos soluções inovadoras e estratégicas, sempre com a velocidade e comunicação adequadas às novas tendências de tecnologia.</p>
-            </div>
-        </div>
-    </section>
+  <script>
+    const pdfs = [
+      { nome: "Alimentação Saudável", link: "https://example.com/pdf1.pdf" },
+      { nome: "Treino em Casa", link: "https://example.com/pdf2.pdf" },
+      { nome: "Guia de Meditação", link: "https://example.com/pdf3.pdf" },
+      { nome: "Receitas Fit", link: "https://example.com/pdf4.pdf" },
+      { nome: "Planejamento Financeiro", link: "https://example.com/pdf5.pdf" }
+    ];
 
-    <!-- Diferenciais Section -->
-    <section id="diferenciais" class="section diferenciais">
-        <div class="container">
-            <h2 class="section-title">Por que escolher a R.O Consultoria?</h2>
-            <div class="diferenciais-container">
-                <div class="diferencial-card fade-in">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 class="diferencial-title">Proximidade</h3>
-                    <p>Trabalhamos lado a lado com sua equipe, entendendo profundamente o seu negócio e suas necessidades específicas. Não somos consultores distantes - somos parceiros comprometidos com o seu sucesso.</p>
-                </div>
-                <div class="diferencial-card fade-in">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3 class="diferencial-title">Experiência Real</h3>
-                    <p>Nossa equipe é formada por profissionais que ocuparam posições estratégicas em empresas de referência. Não trazemos apenas teoria, mas experiência prática em operações, gestão e análise de dados.</p>
-                </div>
-                <div class="diferencial-card fade-in">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3 class="diferencial-title">Implementação Acelerada</h3>
-                    <p>Enquanto outras consultorias podem levar meses para entregar resultados, nossa metodologia ágil permite implementações rápidas e ajustes contínuos, garantindo valor desde as primeiras semanas.</p>
-                </div>
-                <div class="diferencial-card fade-in">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="diferencial-title">Resultados Garantidos</h3>
-                    <p>Nosso compromisso é com resultados mensuráveis. Estabelecemos métricas claras e trabalhamos incansavelmente para superá-las, garantindo retorno sobre o investimento.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    const pdfBody = document.getElementById("pdfBody");
 
-    <!-- Cases Section -->
-    <section id="cases" class="section">
-        <div class="container">
-            <h2 class="section-title">Resultados que transformam negócios</h2>
-            <p class="text-center mb-3">Ao longo dos anos, temos ajudado empresas de diversos setores a alcançar resultados extraordinários. Conheça alguns dos nossos cases de sucesso:</p>
-            
-            <div class="cases-container">
-                <div class="case-card fade-in">
-                    <div class="case-content">
-                        <h3 class="case-title">Escritórios de Advocacia</h3>
-                        <div class="case-result">+60%</div>
-                        <p><strong>Desafio:</strong> Escritórios com processos manuais e dados desorganizados, dificultando a gestão de casos e clientes.</p>
-                        <p><strong>Solução:</strong> Criamos bases de dados estruturadas e implementamos automações que eliminaram tarefas repetitivas.</p>
-                        <p><strong>Resultado:</strong> Aumento de 60% na produtividade e melhoria significativa na experiência dos clientes.</p>
-                    </div>
-                </div>
-                <div class="case-card fade-in">
-                    <div class="case-content">
-                        <h3 class="case-title">Empresas de Compra e Venda de Ouro</h3>
-                        <div class="case-result">+60%</div>
-                        <p><strong>Desafio:</strong> Processos ineficientes e falta de visibilidade sobre operações críticas.</p>
-                        <p><strong>Solução:</strong> Redesenhamos os fluxos operacionais e implementamos dashboards para monitoramento em tempo real.</p>
-                        <p><strong>Resultado:</strong> Aumento de 60% nas vendas e redução de 40% no tempo de processamento de transações.</p>
-                    </div>
-                </div>
-                
-                <div class="case-card fade-in">
-                    <div class="case-content">
-                        <h3 class="case-title">Startup de Delivery</h3>
-                        <div class="case-result">+150%</div>
-                        <p><strong>Desafio:</strong> Crescimento acelerado sem estrutura de dados adequada para tomada de decisões.</p>
-                        <p><strong>Solução:</strong> Desenvolvemos uma arquitetura de dados robusta e implementamos ferramentas de análise preditiva.</p>
-                        <p><strong>Resultado:</strong> Melhoria de 150% na qualidade operacional e redução de 30% nos custos logísticos.</p>
-                    </div>
-                </div>
-                <div class="case-card fade-in">
-                    <div class="case-content">
-                        <h3 class="case-title">Empresa de Mídia</h3>
-                        <div class="case-result">+60%</div>
-                        <p><strong>Desafio:</strong> Processos manuais consumindo tempo excessivo da equipe criativa.</p>
-                        <p><strong>Solução:</strong> Automatizamos fluxos de trabalho e implementamos ferramentas de gestão de conteúdo.</p>
-                        <p><strong>Resultado:</strong> Aumento de 60% na produção de conteúdo e melhoria de 150% na qualidade operacional.</p>
-                    </div>
-    </section>
-    <!-- Consultores Section -->
-    <section id="consultores" class="section consultores">
-        <div class="container">
-            <h2 class="section-title">Liderança com experiência comprovada</h2>
-            <div class="consultores-container">
-                <div class="consultor-card fade-in">
-                    <div class="consultor-content">
-                        <h3 class="consultor-name">Osmar Queiroz</h3>
-                        <p class="consultor-position">Ex-COO do Rappi Brasil</p>
-                        <p>Com mais de oito anos de experiência em posições de liderança em grandes empresas de tecnologia, Osmar desenvolveu uma visão 360° do mercado e habilidade para criar soluções inovadoras e estratégicas.</p>
-                        <p>Sua formação em Economia e Engenharia Civil, além de MBA em Finanças, proporciona uma base sólida para identificar oportunidades de melhoria e implementar soluções que realmente funcionam.</p>
-                    </div>
-                </div>
-                
-                <div class="consultor-card fade-in">
-                    <div class="consultor-content">
-                        <h3 class="consultor-name">Luiz Ramos</h3>
-                        <p class="consultor-position">Diretor de Dados na Giross</p>
-                        <p>Atual Diretor de Dados na Giross, Luiz possui vasta experiência como analista no Rappi e em projetos de consultoria. Sua capacidade de transformar dados complexos em insights acionáveis tem sido crucial para o sucesso de diversos projetos.</p>
-                        <p>Especialista em estruturação de bases de dados, automação de processos e análise preditiva, Luiz combina conhecimento técnico com visão estratégica para entregar resultados excepcionais.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Metodologia Section -->
-    <section id="metodologia" class="section">
-        <div class="container">
-            <h2 class="section-title">Nossa abordagem para resultados extraordinários</h2>
-            <p class="text-center mb-3">Nossa metodologia combina o melhor das práticas ágeis com anos de experiência prática em empresas de alto crescimento. Seguimos um processo estruturado, mas flexível, que se adapta às necessidades específicas de cada cliente:</p>
-            
-            <div class="metodologia-steps">
-                <div class="metodologia-step fade-in">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Diagnóstico Aprofundado</h3>
-                        <p>Analisamos sua operação atual, identificando gargalos, oportunidades e áreas de melhoria imediata.</p>
-                    </div>
-                </div>
-                
-                <div class="metodologia-step fade-in">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Planejamento Estratégico</h3>
-                        <p>Desenvolvemos um plano de ação detalhado com objetivos claros, métricas de sucesso e cronograma de implementação.</p>
-                    </div>
-                </div>    
-                <div class="metodologia-step fade-in">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Implementação Ágil</h3>
-                        <p>Colocamos o plano em prática com ciclos curtos de desenvolvimento e feedback constante.</p>
-                    </div>
-                </div>            
-                <div class="metodologia-step fade-in">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Mensuração de Resultados</h3>
-                        <p>Monitoramos continuamente os KPIs estabelecidos, garantindo transparência e visibilidade dos avanços.</p>
-                    </div>
-                </div>   
-                <div class="metodologia-step fade-in">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Otimização Contínua</h3>
-                        <p>Refinamos constantemente nossas soluções, adaptando-as às mudanças do mercado e às novas necessidades do seu negócio.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contato Section -->
-<section id="contato" class="section contato">
-    <div class="container">
-        <div class="contato-container">
-            <div class="contato-info">
-                <h2>Pronto para transformar seu negócio?</h2>
-                <p>Entre em contato conosco para uma conversa inicial sem compromisso. Vamos entender seus desafios e mostrar como podemos ajudar sua empresa a alcançar resultados extraordinários.</p>
-                <div class="contato-cta mt-3">
-                    <a href="#"
-" class="btn btn-secondary">Agende uma avaliação gratuita</a>
-                </div>
-            </div>               
-            <div class="contato-form">
-                <form action="https://formsubmit.co/lmramos1997@gmail.com" method="POST">
-                    <input type="hidden" name="_next" value="https://QRConsultoria.github.io/obrigado.html">
+    function renderTable(data) {
+      pdfBody.innerHTML = "";
+      data.forEach(pdf => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${pdf.nome}</td>
+          <td><a href="${pdf.link}" target="_blank">${pdf.link}</a></td>
+          <td><a href="${pdf.link}" class="btn" download>Download</a></td>
+        `;
+        pdfBody.appendChild(row);
+      });
+    }
 
-                    <div class="form-group">
-                        <label for="nome" class="form-label">Nome</label>
-                        <input type="text" name="nome" id="nome" class="form-control" required>
-                    </div>                        
-                    <div class="form-group">
-                        <label for="email" class="form-label">E-mail</label>
-                        <input type="email" name="email" id="email" class="form-control" required>
-                    </div>                       
-                    <div class="form-group">
-                        <label for="telefone" class="form-label">Telefone</label>
-                        <input type="tel" name="telefone" id="telefone" class="form-control">
-                    </div>                      
-                    <div class="form-group">
-                        <label for="empresa" class="form-label">Empresa</label>
-                        <input type="text" name="empresa" id="empresa" class="form-control">
-                    </div>                       
-                    <div class="form-group">
-                        <label for="mensagem" class="form-label">Mensagem</label>
-                        <textarea name="mensagem" id="mensagem" class="form-control" required></textarea>
-                    </div>                      
-                    <button type="submit" class="btn btn-primary">Enviar mensagem</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-about">
-                    <div class="footer-logo">R.<span>O</span></div>
-                    <p>Transformamos dados em resultados extraordinários para empresas que buscam excelência.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                   <!--     <a href="#" class="social-link"><i class="fab fa-instagram"></i></a> -->
-                     <!--   <a href="#" class="social-link"><i class="fab fa-twitter"></i></a> -->
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#diferenciais">Diferenciais</a></li>
-                        <li><a href="#cases">Cases</a></li>
-                        <li><a href="#consultores">Consultores</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>               
-                <div class="footer-links">
-                    <h3>Contato</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> contato@roconsultoria.com.br</li>
-                        <li><i class="fas fa-phone"></i> (11) 97342-5402</li>
-                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP</li>
-                    </ul>
-                </div>
-            </div>            
-            <div class="copyright">
-                <p>&copy; 2025 R.O Consultoria. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-  <!-- WhatsApp Button -->
-<a href="https://wa.me/5511973425402?text=Eu%20quero%20conhecer%20mais%20sobre%20a%20RO%20Consultoria%20e%20trazer%20resultados%20extraordin%C3%A1rios%20para%20o%20meu%20neg%C3%B3cio" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-whatsapp"></i>
-</a>
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    document.getElementById("searchInput").addEventListener("keyup", function() {
+      const searchTerm = this.value.toLowerCase();
+      const filtered = pdfs.filter(pdf =>
+        pdf.nome.toLowerCase().includes(searchTerm)
+      );
+      renderTable(filtered);
+    });
+
+    renderTable(pdfs);
+  </script>
 </body>
 </html>
