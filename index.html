@@ -9,30 +9,32 @@
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="visual-elements.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-container container">
-            <a href="#" class="logo">R.<span>O</span></a>
-            <nav>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+            <a href="#" class="logo">
+                <span class="logo-text">R.<span class="logo-accent">O</span></span>
+                <span class="logo-subtitle">Consultoria</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="#inicio" class="nav-link active">Início</a></li>
                     <li class="nav-item"><a href="#sobre" class="nav-link">Sobre nós</a></li>
                     <li class="nav-item"><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
                     <li class="nav-item"><a href="#cases" class="nav-link">Cases</a></li>
                     <li class="nav-item"><a href="#consultores" class="nav-link">Consultores</a></li>
                     <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
-                <div class="hamburger">
+                <div class="hamburger" id="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -42,28 +44,116 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+            <div class="hero-gradient"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Transformamos dados em resultados <span class="text-secondary">extraordinários</span></h1>
-                <p class="hero-subtitle">Aumento de 60% em vendas e 150% em qualidade operacional para empresas que buscam excelência</p>
+                <div class="hero-badge">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Resultados Comprovados</span>
+                </div>
+                <h1 class="hero-title">
+                    Transformamos dados em 
+                    <span class="text-gradient">resultados extraordinários</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Aumento de <strong>60% em vendas</strong> e <strong>150% em qualidade operacional</strong> 
+                    para empresas que buscam excelência através de dados estruturados e processos otimizados
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">60%</div>
+                        <div class="stat-label">Aumento em Vendas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150%</div>
+                        <div class="stat-label">Melhoria Operacional</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Anos de Experiência</div>
+                    </div>
+                </div>
                 <div class="hero-cta">
-                    <a href="#contato" class="btn btn-secondary">Vamos conversar sobre o seu negócio</a>
+                    <a href="#contato" class="btn btn-primary">
+                        <span>Vamos conversar sobre o seu negócio</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#sobre" class="btn btn-outline">
+                        <span>Conheça nossa metodologia</span>
+                    </a>
                 </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
     <!-- Sobre Section -->
-    <section id="sobre" class="section">
+    <section id="sobre" class="section sobre">
         <div class="container">
-            <h2 class="section-title">Experiência real para desafios reais</h2>
+            <div class="section-header">
+                <span class="section-badge">Quem Somos</span>
+                <h2 class="section-title">Experiência real para desafios reais</h2>
+                <p class="section-subtitle">
+                    Combinamos expertise operacional com análise de dados para transformar 
+                    seu negócio de forma prática e orientada a resultados
+                </p>
+            </div>
+            
             <div class="sobre-content">
-                <p>A R.O Consultoria nasceu da visão de dois profissionais com bagagem sólida em empresas de tecnologia e startups de alto crescimento. Combinamos a experiência operacional de um ex-COO do Rappi Brasil com a expertise analítica de um diretor de dados, criando uma consultoria que entende profundamente os desafios das empresas modernas.</p>
+                <div class="sobre-text">
+                    <div class="text-block">
+                        <h3>Nossa Origem</h3>
+                        <p>A R.O Consultoria nasceu da visão de dois profissionais com bagagem sólida em empresas de tecnologia e startups de alto crescimento. Combinamos a experiência operacional de um ex-COO do Rappi Brasil com a expertise analítica de um diretor de dados.</p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <h3>Nossa Abordagem</h3>
+                        <p>Nossa metodologia é prática e orientada a resultados. Não oferecemos apenas relatórios e recomendações teóricas - implementamos soluções, automatizamos processos e transformamos dados em insights acionáveis que impulsionam o crescimento do seu negócio.</p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <h3>Nossa Visão</h3>
+                        <p>Com mais de oito anos de experiência em posições de liderança, desenvolvemos uma visão 360° do mercado e criamos soluções inovadoras e estratégicas, sempre com a velocidade e comunicação adequadas às novas tendências de tecnologia.</p>
+                    </div>
+                </div>
                 
-                <p>Nossa abordagem é prática e orientada a resultados. Não oferecemos apenas relatórios e recomendações teóricas - implementamos soluções, automatizamos processos e transformamos dados em insights acionáveis que impulsionam o crescimento do seu negócio.</p>
-                
-                <p>Com mais de oito anos de experiência em posições de liderança, desenvolvemos uma visão 360° do mercado e criamos soluções inovadoras e estratégicas, sempre com a velocidade e comunicação adequadas às novas tendências de tecnologia.</p>
+                <div class="sobre-visual">
+                    <div class="experience-card">
+                        <div class="experience-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="experience-content">
+                            <h4>Startups de Alto Crescimento</h4>
+                            <p>Experiência direta em empresas que escalaram rapidamente</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <div class="experience-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="experience-content">
+                            <h4>Análise de Dados Avançada</h4>
+                            <p>Transformamos dados complexos em insights acionáveis</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <div class="experience-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="experience-content">
+                            <h4>Automação de Processos</h4>
+                            <p>Eliminamos tarefas repetitivas e otimizamos operações</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -71,240 +161,549 @@
     <!-- Diferenciais Section -->
     <section id="diferenciais" class="section diferenciais">
         <div class="container">
-            <h2 class="section-title">Por que escolher a R.O Consultoria?</h2>
-            <div class="diferenciais-container">
-                <div class="diferencial-card fade-in">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-handshake"></i>
+            <div class="section-header">
+                <span class="section-badge">Nossos Diferenciais</span>
+                <h2 class="section-title">Por que escolher a R.O Consultoria?</h2>
+                <p class="section-subtitle">
+                    Combinamos experiência prática, proximidade com o cliente e implementação acelerada 
+                    para entregar resultados que realmente transformam negócios
+                </p>
+            </div>
+            
+            <div class="diferenciais-grid">
+                <div class="diferencial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-header">
+                        <div class="diferencial-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="diferencial-title">Proximidade</h3>
                     </div>
-                    <h3 class="diferencial-title">Proximidade</h3>
-                    <p>Trabalhamos lado a lado com sua equipe, entendendo profundamente o seu negócio e suas necessidades específicas. Não somos consultores distantes - somos parceiros comprometidos com o seu sucesso.</p>
+                    <p class="diferencial-description">
+                        Trabalhamos lado a lado com sua equipe, entendendo profundamente o seu negócio e suas necessidades específicas. Não somos consultores distantes - somos parceiros comprometidos com o seu sucesso.
+                    </p>
+                    <div class="card-footer">
+                        <span class="diferencial-highlight">Parceria Real</span>
+                    </div>
                 </div>
-                <div class="diferencial-card fade-in">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-briefcase"></i>
+                
+                <div class="diferencial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-header">
+                        <div class="diferencial-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="diferencial-title">Experiência Real</h3>
                     </div>
-                    <h3 class="diferencial-title">Experiência Real</h3>
-                    <p>Nossa equipe é formada por profissionais que ocuparam posições estratégicas em empresas de referência. Não trazemos apenas teoria, mas experiência prática em operações, gestão e análise de dados.</p>
+                    <p class="diferencial-description">
+                        Nossa equipe é formada por profissionais que ocuparam posições estratégicas em empresas de referência. Não trazemos apenas teoria, mas experiência prática em operações, gestão e análise de dados.
+                    </p>
+                    <div class="card-footer">
+                        <span class="diferencial-highlight">Prática Comprovada</span>
+                    </div>
                 </div>
-                <div class="diferencial-card fade-in">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-rocket"></i>
+                
+                <div class="diferencial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-header">
+                        <div class="diferencial-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="diferencial-title">Implementação Acelerada</h3>
                     </div>
-                    <h3 class="diferencial-title">Implementação Acelerada</h3>
-                    <p>Enquanto outras consultorias podem levar meses para entregar resultados, nossa metodologia ágil permite implementações rápidas e ajustes contínuos, garantindo valor desde as primeiras semanas.</p>
+                    <p class="diferencial-description">
+                        Enquanto outras consultorias podem levar meses para entregar resultados, nossa metodologia ágil permite implementações rápidas e ajustes contínuos, garantindo valor desde as primeiras semanas.
+                    </p>
+                    <div class="card-footer">
+                        <span class="diferencial-highlight">Resultados Rápidos</span>
+                    </div>
                 </div>
-                <div class="diferencial-card fade-in">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-chart-line"></i>
+                
+                <div class="diferencial-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-header">
+                        <div class="diferencial-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="diferencial-title">Resultados Garantidos</h3>
                     </div>
-                    <h3 class="diferencial-title">Resultados Garantidos</h3>
-                    <p>Nosso compromisso é com resultados mensuráveis. Estabelecemos métricas claras e trabalhamos incansavelmente para superá-las, garantindo retorno sobre o investimento.</p>
+                    <p class="diferencial-description">
+                        Nosso compromisso é com resultados mensuráveis. Estabelecemos métricas claras e trabalhamos incansavelmente para superá-las, garantindo retorno sobre o investimento.
+                    </p>
+                    <div class="card-footer">
+                        <span class="diferencial-highlight">ROI Comprovado</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Cases Section -->
-    <section id="cases" class="section">
+    <section id="cases" class="section cases">
         <div class="container">
-            <h2 class="section-title">Resultados que transformam negócios</h2>
-            <p class="text-center mb-3">Ao longo dos anos, temos ajudado empresas de diversos setores a alcançar resultados extraordinários. Conheça alguns dos nossos cases de sucesso:</p>
+            <div class="section-header">
+                <span class="section-badge">Cases de Sucesso</span>
+                <h2 class="section-title">Resultados que transformam negócios</h2>
+                <p class="section-subtitle">
+                    Ao longo dos anos, temos ajudado empresas de diversos setores a alcançar 
+                    resultados extraordinários. Conheça alguns dos nossos cases de sucesso
+                </p>
+            </div>
             
-            <div class="cases-container">
-                <div class="case-card fade-in">
-                    <div class="case-content">
-                        <h3 class="case-title">Escritórios de Advocacia</h3>
+            <div class="cases-grid">
+                <div class="case-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="case-header">
+                        <div class="case-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
                         <div class="case-result">+60%</div>
-                        <p><strong>Desafio:</strong> Escritórios com processos manuais e dados desorganizados, dificultando a gestão de casos e clientes.</p>
-                        <p><strong>Solução:</strong> Criamos bases de dados estruturadas e implementamos automações que eliminaram tarefas repetitivas.</p>
-                        <p><strong>Resultado:</strong> Aumento de 60% na produtividade e melhoria significativa na experiência dos clientes.</p>
                     </div>
-                </div>
-                <div class="case-card fade-in">
-                    <div class="case-content">
-                        <h3 class="case-title">Empresas de Compra e Venda de Ouro</h3>
-                        <div class="case-result">+60%</div>
-                        <p><strong>Desafio:</strong> Processos ineficientes e falta de visibilidade sobre operações críticas.</p>
-                        <p><strong>Solução:</strong> Redesenhamos os fluxos operacionais e implementamos dashboards para monitoramento em tempo real.</p>
-                        <p><strong>Resultado:</strong> Aumento de 60% nas vendas e redução de 40% no tempo de processamento de transações.</p>
+                    <h3 class="case-title">Escritórios de Advocacia</h3>
+                    <div class="case-details">
+                        <div class="case-item">
+                            <strong>Desafio:</strong> Escritórios com processos manuais e dados desorganizados, dificultando a gestão de casos e clientes.
+                        </div>
+                        <div class="case-item">
+                            <strong>Solução:</strong> Criamos bases de dados estruturadas e implementamos automações que eliminaram tarefas repetitivas.
+                        </div>
+                        <div class="case-item">
+                            <strong>Resultado:</strong> Aumento de 60% na produtividade e melhoria significativa na experiência dos clientes.
+                        </div>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">60%</span>
+                            <span class="metric-label">Produtividade</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">40%</span>
+                            <span class="metric-label">Redução de Tempo</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="case-card fade-in">
-                    <div class="case-content">
-                        <h3 class="case-title">Startup de Delivery</h3>
-                        <div class="case-result">+150%</div>
-                        <p><strong>Desafio:</strong> Crescimento acelerado sem estrutura de dados adequada para tomada de decisões.</p>
-                        <p><strong>Solução:</strong> Desenvolvemos uma arquitetura de dados robusta e implementamos ferramentas de análise preditiva.</p>
-                        <p><strong>Resultado:</strong> Melhoria de 150% na qualidade operacional e redução de 30% nos custos logísticos.</p>
+                <div class="case-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="case-header">
+                        <div class="case-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="case-result">+60%</div>
+                    </div>
+                    <h3 class="case-title">Empresas de Compra e Venda de Ouro</h3>
+                    <div class="case-details">
+                        <div class="case-item">
+                            <strong>Desafio:</strong> Processos ineficientes e falta de visibilidade sobre operações críticas.
+                        </div>
+                        <div class="case-item">
+                            <strong>Solução:</strong> Redesenhamos os fluxos operacionais e implementamos dashboards para monitoramento em tempo real.
+                        </div>
+                        <div class="case-item">
+                            <strong>Resultado:</strong> Aumento de 60% nas vendas e redução de 40% no tempo de processamento de transações.
+                        </div>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">60%</span>
+                            <span class="metric-label">Vendas</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">40%</span>
+                            <span class="metric-label">Tempo Reduzido</span>
+                        </div>
                     </div>
                 </div>
-                <div class="case-card fade-in">
-                    <div class="case-content">
-                        <h3 class="case-title">Empresa de Mídia</h3>
-                        <div class="case-result">+60%</div>
-                        <p><strong>Desafio:</strong> Processos manuais consumindo tempo excessivo da equipe criativa.</p>
-                        <p><strong>Solução:</strong> Automatizamos fluxos de trabalho e implementamos ferramentas de gestão de conteúdo.</p>
-                        <p><strong>Resultado:</strong> Aumento de 60% na produção de conteúdo e melhoria de 150% na qualidade operacional.</p>
+                
+                <div class="case-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="case-header">
+                        <div class="case-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="case-result">+150%</div>
                     </div>
+                    <h3 class="case-title">Startup de Delivery</h3>
+                    <div class="case-details">
+                        <div class="case-item">
+                            <strong>Desafio:</strong> Crescimento acelerado sem estrutura de dados adequada para tomada de decisões.
+                        </div>
+                        <div class="case-item">
+                            <strong>Solução:</strong> Desenvolvemos uma arquitetura de dados robusta e implementamos ferramentas de análise preditiva.
+                        </div>
+                        <div class="case-item">
+                            <strong>Resultado:</strong> Melhoria de 150% na qualidade operacional e redução de 30% nos custos logísticos.
+                        </div>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">150%</span>
+                            <span class="metric-label">Qualidade</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">30%</span>
+                            <span class="metric-label">Custos Reduzidos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="case-header">
+                        <div class="case-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="case-result">+60%</div>
+                    </div>
+                    <h3 class="case-title">Empresa de Mídia</h3>
+                    <div class="case-details">
+                        <div class="case-item">
+                            <strong>Desafio:</strong> Processos manuais consumindo tempo excessivo da equipe criativa.
+                        </div>
+                        <div class="case-item">
+                            <strong>Solução:</strong> Automatizamos fluxos de trabalho e implementamos ferramentas de gestão de conteúdo.
+                        </div>
+                        <div class="case-item">
+                            <strong>Resultado:</strong> Aumento de 60% na produção de conteúdo e melhoria de 150% na qualidade operacional.
+                        </div>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">60%</span>
+                            <span class="metric-label">Produção</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">150%</span>
+                            <span class="metric-label">Qualidade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
     <!-- Consultores Section -->
     <section id="consultores" class="section consultores">
         <div class="container">
-            <h2 class="section-title">Liderança com experiência comprovada</h2>
-            <div class="consultores-container">
-                <div class="consultor-card fade-in">
+            <div class="section-header">
+                <span class="section-badge">Nossa Equipe</span>
+                <h2 class="section-title">Liderança com experiência comprovada</h2>
+                <p class="section-subtitle">
+                    Conheça os profissionais que lideram nossa consultoria, com experiência 
+                    comprovada em empresas de referência no mercado
+                </p>
+            </div>
+            
+            <div class="consultores-grid">
+                <div class="consultor-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="consultor-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="consultor-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Ex-COO</span>
+                        </div>
+                    </div>
                     <div class="consultor-content">
                         <h3 class="consultor-name">Osmar Queiroz</h3>
                         <p class="consultor-position">Ex-COO do Rappi Brasil</p>
-                        <p>Com mais de oito anos de experiência em posições de liderança em grandes empresas de tecnologia, Osmar desenvolveu uma visão 360° do mercado e habilidade para criar soluções inovadoras e estratégicas.</p>
-                        <p>Sua formação em Economia e Engenharia Civil, além de MBA em Finanças, proporciona uma base sólida para identificar oportunidades de melhoria e implementar soluções que realmente funcionam.</p>
+                        <div class="consultor-description">
+                            <p>Com mais de oito anos de experiência em posições de liderança em grandes empresas de tecnologia, Osmar desenvolveu uma visão 360° do mercado e habilidade para criar soluções inovadoras e estratégicas.</p>
+                            <p>Sua formação em Economia e Engenharia Civil, além de MBA em Finanças, proporciona uma base sólida para identificar oportunidades de melhoria e implementar soluções que realmente funcionam.</p>
+                        </div>
+                        <div class="consultor-skills">
+                            <span class="skill-tag">Estratégia</span>
+                            <span class="skill-tag">Operações</span>
+                            <span class="skill-tag">Liderança</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="consultor-card fade-in">
+                <div class="consultor-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="consultor-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="consultor-badge">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Diretor</span>
+                        </div>
+                    </div>
                     <div class="consultor-content">
                         <h3 class="consultor-name">Luiz Ramos</h3>
                         <p class="consultor-position">Diretor de Dados na Giross</p>
-                        <p>Atual Diretor de Dados na Giross, Luiz possui vasta experiência como analista no Rappi e em projetos de consultoria. Sua capacidade de transformar dados complexos em insights acionáveis tem sido crucial para o sucesso de diversos projetos.</p>
-                        <p>Especialista em estruturação de bases de dados, automação de processos e análise preditiva, Luiz combina conhecimento técnico com visão estratégica para entregar resultados excepcionais.</p>
+                        <div class="consultor-description">
+                            <p>Atual Diretor de Dados na Giross, Luiz possui vasta experiência como analista no Rappi e em projetos de consultoria. Sua capacidade de transformar dados complexos em insights acionáveis tem sido crucial para o sucesso de diversos projetos.</p>
+                            <p>Especialista em estruturação de bases de dados, automação de processos e análise preditiva, Luiz combina conhecimento técnico com visão estratégica para entregar resultados excepcionais.</p>
+                        </div>
+                        <div class="consultor-skills">
+                            <span class="skill-tag">Dados</span>
+                            <span class="skill-tag">Analytics</span>
+                            <span class="skill-tag">Automação</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Metodologia Section -->
-    <section id="metodologia" class="section">
+    <section id="metodologia" class="section metodologia">
         <div class="container">
-            <h2 class="section-title">Nossa abordagem para resultados extraordinários</h2>
-            <p class="text-center mb-3">Nossa metodologia combina o melhor das práticas ágeis com anos de experiência prática em empresas de alto crescimento. Seguimos um processo estruturado, mas flexível, que se adapta às necessidades específicas de cada cliente:</p>
+            <div class="section-header">
+                <span class="section-badge">Nossa Metodologia</span>
+                <h2 class="section-title">Nossa abordagem para resultados extraordinários</h2>
+                <p class="section-subtitle">
+                    Nossa metodologia combina o melhor das práticas ágeis com anos de experiência prática 
+                    em empresas de alto crescimento. Seguimos um processo estruturado, mas flexível
+                </p>
+            </div>
             
-            <div class="metodologia-steps">
-                <div class="metodologia-step fade-in">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
+            <div class="metodologia-timeline">
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-marker">
+                        <span class="step-number">1</span>
+                    </div>
+                    <div class="timeline-content">
                         <h3 class="step-title">Diagnóstico Aprofundado</h3>
-                        <p>Analisamos sua operação atual, identificando gargalos, oportunidades e áreas de melhoria imediata.</p>
+                        <p class="step-description">
+                            Analisamos sua operação atual, identificando gargalos, oportunidades e áreas de melhoria imediata através de metodologias comprovadas.
+                        </p>
+                        <div class="step-features">
+                            <span class="feature-tag">Análise de Processos</span>
+                            <span class="feature-tag">Mapeamento de Dados</span>
+                            <span class="feature-tag">Identificação de Gargalos</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="metodologia-step fade-in">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="timeline-marker">
+                        <span class="step-number">2</span>
+                    </div>
+                    <div class="timeline-content">
                         <h3 class="step-title">Planejamento Estratégico</h3>
-                        <p>Desenvolvemos um plano de ação detalhado com objetivos claros, métricas de sucesso e cronograma de implementação.</p>
+                        <p class="step-description">
+                            Desenvolvemos um plano de ação detalhado com objetivos claros, métricas de sucesso e cronograma de implementação personalizado.
+                        </p>
+                        <div class="step-features">
+                            <span class="feature-tag">Objetivos SMART</span>
+                            <span class="feature-tag">KPIs Definidos</span>
+                            <span class="feature-tag">Cronograma Detalhado</span>
+                        </div>
                     </div>
-                </div>    
-                <div class="metodologia-step fade-in">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-marker">
+                        <span class="step-number">3</span>
+                    </div>
+                    <div class="timeline-content">
                         <h3 class="step-title">Implementação Ágil</h3>
-                        <p>Colocamos o plano em prática com ciclos curtos de desenvolvimento e feedback constante.</p>
+                        <p class="step-description">
+                            Colocamos o plano em prática com ciclos curtos de desenvolvimento e feedback constante, garantindo adaptabilidade e eficiência.
+                        </p>
+                        <div class="step-features">
+                            <span class="feature-tag">Sprints Semanais</span>
+                            <span class="feature-tag">Feedback Contínuo</span>
+                            <span class="feature-tag">Ajustes Rápidos</span>
+                        </div>
                     </div>
-                </div>            
-                <div class="metodologia-step fade-in">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                    <div class="timeline-marker">
+                        <span class="step-number">4</span>
+                    </div>
+                    <div class="timeline-content">
                         <h3 class="step-title">Mensuração de Resultados</h3>
-                        <p>Monitoramos continuamente os KPIs estabelecidos, garantindo transparência e visibilidade dos avanços.</p>
+                        <p class="step-description">
+                            Monitoramos continuamente os KPIs estabelecidos, garantindo transparência e visibilidade dos avanços através de dashboards em tempo real.
+                        </p>
+                        <div class="step-features">
+                            <span class="feature-tag">Dashboards</span>
+                            <span class="feature-tag">Relatórios</span>
+                            <span class="feature-tag">Análise de ROI</span>
+                        </div>
                     </div>
-                </div>   
-                <div class="metodologia-step fade-in">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="500">
+                    <div class="timeline-marker">
+                        <span class="step-number">5</span>
+                    </div>
+                    <div class="timeline-content">
                         <h3 class="step-title">Otimização Contínua</h3>
-                        <p>Refinamos constantemente nossas soluções, adaptando-as às mudanças do mercado e às novas necessidades do seu negócio.</p>
+                        <p class="step-description">
+                            Refinamos constantemente nossas soluções, adaptando-as às mudanças do mercado e às novas necessidades do seu negócio.
+                        </p>
+                        <div class="step-features">
+                            <span class="feature-tag">Melhoria Contínua</span>
+                            <span class="feature-tag">Adaptação</span>
+                            <span class="feature-tag">Inovação</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contato Section -->
-<section id="contato" class="section contato">
-    <div class="container">
-        <div class="contato-container">
-            <div class="contato-info">
-                <h2>Pronto para transformar seu negócio?</h2>
-                <p>Entre em contato conosco para uma conversa inicial sem compromisso. Vamos entender seus desafios e mostrar como podemos ajudar sua empresa a alcançar resultados extraordinários.</p>
-                <div class="contato-cta mt-3">
-                    <a href="#"
-" class="btn btn-secondary">Agende uma avaliação gratuita</a>
-                </div>
-            </div>               
-            <div class="contato-form">
-                <form action="https://formsubmit.co/lmramos1997@gmail.com" method="POST">
-                    <input type="hidden" name="_next" value="https://QRConsultoria.github.io/obrigado.html">
 
-                    <div class="form-group">
-                        <label for="nome" class="form-label">Nome</label>
-                        <input type="text" name="nome" id="nome" class="form-control" required>
-                    </div>                        
-                    <div class="form-group">
-                        <label for="email" class="form-label">E-mail</label>
-                        <input type="email" name="email" id="email" class="form-control" required>
-                    </div>                       
-                    <div class="form-group">
-                        <label for="telefone" class="form-label">Telefone</label>
-                        <input type="tel" name="telefone" id="telefone" class="form-control">
-                    </div>                      
-                    <div class="form-group">
-                        <label for="empresa" class="form-label">Empresa</label>
-                        <input type="text" name="empresa" id="empresa" class="form-control">
-                    </div>                       
-                    <div class="form-group">
-                        <label for="mensagem" class="form-label">Mensagem</label>
-                        <textarea name="mensagem" id="mensagem" class="form-control" required></textarea>
-                    </div>                      
-                    <button type="submit" class="btn btn-primary">Enviar mensagem</button>
-                </form>
+    <!-- Contato Section -->
+    <section id="contato" class="section contato">
+        <div class="container">
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="section-header">
+                        <span class="section-badge light">Entre em Contato</span>
+                        <h2 class="section-title light">Pronto para transformar seu negócio?</h2>
+                        <p class="section-subtitle light">
+                            Entre em contato conosco para uma conversa inicial sem compromisso. 
+                            Vamos entender seus desafios e mostrar como podemos ajudar sua empresa 
+                            a alcançar resultados extraordinários.
+                        </p>
+                    </div>
+                    
+                    <div class="contact-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Avaliação gratuita do seu negócio</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Identificação de oportunidades imediatas</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Proposta personalizada para seus desafios</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-cta">
+                        <a href="#" class="btn btn-secondary large">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Agende uma avaliação gratuita</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contato-form-container">
+                    <form class="contato-form" action="https://formsubmit.co/lmramos1997@gmail.com" method="POST">
+                        <input type="hidden" name="_next" value="https://QRConsultoria.github.io/obrigado.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="form-header">
+                            <h3>Fale Conosco</h3>
+                            <p>Preencha o formulário e entraremos em contato em até 24 horas</p>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome" class="form-label">Nome Completo</label>
+                                <input type="text" name="nome" id="nome" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" name="email" id="email" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefone" class="form-label">Telefone</label>
+                                <input type="tel" name="telefone" id="telefone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="empresa" class="form-label">Empresa</label>
+                                <input type="text" name="empresa" id="empresa" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cargo" class="form-label">Cargo</label>
+                            <input type="text" name="cargo" id="cargo" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensagem" class="form-label">Como podemos ajudar?</label>
+                            <textarea name="mensagem" id="mensagem" class="form-control" rows="4" placeholder="Descreva brevemente seus principais desafios ou objetivos..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary full-width">
+                            <span>Enviar Mensagem</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-about">
-                    <div class="footer-logo">R.<span>O</span></div>
-                    <p>Transformamos dados em resultados extraordinários para empresas que buscam excelência.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                   <!--     <a href="#" class="social-link"><i class="fab fa-instagram"></i></a> -->
-                     <!--   <a href="#" class="social-link"><i class="fab fa-twitter"></i></a> -->
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="#" class="footer-logo">
+                            <span class="logo-text">R.<span class="logo-accent">O</span></span>
+                            <span class="logo-subtitle">Consultoria</span>
+                        </a>
+                        <p class="footer-description">
+                            Transformamos dados em resultados extraordinários através de 
+                            consultoria especializada e metodologias comprovadas.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Navegação</h4>
+                            <ul>
+                                <li><a href="#inicio">Início</a></li>
+                                <li><a href="#sobre">Sobre nós</a></li>
+                                <li><a href="#diferenciais">Diferenciais</a></li>
+                                <li><a href="#cases">Cases</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Serviços</h4>
+                            <ul>
+                                <li><a href="#consultores">Consultores</a></li>
+                                <li><a href="#metodologia">Metodologia</a></li>
+                                <li><a href="#contato">Contato</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Contato</h4>
+                            <ul>
+                                <li><a href="mailto:lmramos1997@gmail.com">lmramos1997@gmail.com</a></li>
+                                <li><a href="#contato">Formulário de Contato</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#diferenciais">Diferenciais</a></li>
-                        <li><a href="#cases">Cases</a></li>
-                        <li><a href="#consultores">Consultores</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>               
-                <div class="footer-links">
-                    <h3>Contato</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> contato@roconsultoria.com.br</li>
-                        <li><i class="fas fa-phone"></i> (11) 97342-5402</li>
-                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP</li>
-                    </ul>
+                
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        <p>&copy; 2025 R.O Consultoria. Todos os direitos reservados.</p>
+                    </div>
                 </div>
-            </div>            
-            <div class="copyright">
-                <p>&copy; 2025 R.O Consultoria. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-  <!-- WhatsApp Button -->
-<a href="https://wa.me/5511973425402?text=Eu%20quero%20conhecer%20mais%20sobre%20a%20RO%20Consultoria%20e%20trazer%20resultados%20extraordin%C3%A1rios%20para%20o%20meu%20neg%C3%B3cio" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-whatsapp"></i>
-</a>
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
+
