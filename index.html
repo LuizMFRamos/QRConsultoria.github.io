@@ -1,131 +1,207 @@
-```html
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OQ Consultoria | Transformando Dados em Resultados</title>
-  <meta name="description" content="Consultoria em dados, processos e operações para resultados expressivos." />
+  <title>Ramos &amp; Queiróz Consultoria | Transformamos dados em resultados extraordinários</title>
+  <meta name="description" content="Consultoria especializada em transformação de processos, organização de dados e aceleração de startups.">
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Hero Section with Video Background -->
-  <section id="hero" class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="assets/video/data-ops.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-overlay"></div>
-
-    <header class="hero-header container">
-      <div class="logo oq-logo">OQ</div>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-container container">
+      <a href="#" class="logo">
+        <span class="logo-text">Ramos &amp; <span class="logo-accent">Queiróz</span></span>
+        <span class="logo-subtitle">Consultoria</span>
+      </a>
       <nav class="nav">
-        <ul>
-          <li><a href="#hero">Início</a></li>
-          <li><a href="#sobre">Quem Somos</a></li>
-          <li><a href="#diferenciais">Diferenciais</a></li>
-          <li><a href="#metodologia">Metodologia</a></li>
-          <li><a href="#contato">Contato</a></li>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="#inicio" class="nav-link active">Início</a></li>
+          <li class="nav-item"><a href="#sobre" class="nav-link">Sobre nós</a></li>
+          <li class="nav-item"><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+          <li class="nav-item"><a href="#cases" class="nav-link">Cases</a></li>
+          <li class="nav-item"><a href="#consultores" class="nav-link">Consultores</a></li>
+          <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
         </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
-    </header>
-
-    <div class="hero-content container">
-      <h1 class="hero-title">Vamos juntos fazer Brasil</h1>
-      <p class="hero-subtitle">Transformando Dados em Resultados Extraordinários</p>
-      <a href="#contato" class="btn btn-primary">Fale com nossos especialistas</a>
     </div>
+  </header>
 
-    <a href="#contato" class="btn-contact-fixed">Fale Conosco</a>
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-background">
+      <div class="hero-pattern"></div>
+      <div class="hero-gradient"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content text-center">
+        <h1 class="hero-title">
+          Vamos juntos fazer Brasil<br />
+          <span class="text-gradient">Transformamos dados em resultados extraordinários</span>
+        </h1>
+        <p class="hero-subtitle">
+          Com estratégias baseadas em dados, impulsionamos seu negócio de forma contínua e sólida.
+        </p>
+        <div class="hero-cta">
+          <a href="#contato" class="btn btn-primary">
+            <span>Fale com nossos especialistas</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Quem Somos -->
-  <section id="sobre" class="section sobre container">
-    <h2 class="section-title">Experiência real para desafios reais</h2>
-    <div class="sobre-grid">
-      <div class="sobre-card">
-        <img src="assets/img/osmar.jpg" alt="Osmar Queiróz" class="sobre-img" />
-        <h3>Osmar Queiróz</h3>
-        <p>Com mais de oito anos em tecnologia e finanças, Osmar lidera projetos de P&amp;L, startups e estratégias de crescimento, com publicações em Forbes e O Globo.</p>
+  <!-- Sobre Section -->
+  <section id="sobre" class="section sobre">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Quem Somos</span>
+        <h2 class="section-title">Experiência real para desafios reais</h2>
+        <p class="section-subtitle">
+          Combinamos expertise operacional com análise de dados para transformar seu negócio com foco em resultados.
+        </p>
       </div>
-      <div class="sobre-card">
-        <img src="assets/img/luiz.jpg" alt="Luiz Ramos" class="sobre-img" />
-        <h3>Luiz Ramos</h3>
-        <p>Fundador de áreas de dados na Giross e Rappi, reduziu cancelamentos de 3% para 1,4%, aumentou faturamento em 110% e automatizou KPIs e processos.</p>
+      <div class="sobre-content">
+        <div class="text-block">
+          <h3>Osmar Queiróz</h3>
+          <p>
+            Com mais de oito anos de experiência em grandes empresas de tecnologia, Osmar combina Economia, Engenharia Civil e um MBA em Finanças para desenvolver soluções inovadoras e estratégicas. Especialista em operações de startups, P&amp;L e gestão de pessoas, sua visão 360° impulsiona a expansão e perenidade dos negócios, com menções em Forbes, O Globo e GuiaKast. :contentReference[oaicite:0]{index=0}
+          </p>
+        </div>
+        <div class="text-block">
+          <h3>Luiz Ramos</h3>
+          <p>
+            Fundador da área de dados na Giross, Luiz estruturou KPIs e processos que alavancaram o faturamento em 110% e o volume de ordens em 92%. Como Analista de Planejamento e Operações no Rappi e na Kovi, liderou projetos que reduziram a taxa de cancelamento de 3% para 1,4%, otimizaram tempos de preparo de entregas e automatizaram filas de atendimento, sempre guiado por resultados mensuráveis.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Diferenciais -->
-  <section id="diferenciais" class="section diferenciais container">
-    <h2 class="section-title">Resultados Acima da Média com OQ Consultoria</h2>
-    <p class="section-subtitle">Nossos clientes superam o mercado com crescimento sustentável e lucro consistente.</p>
-    <div class="diff-grid">
-      <div class="diff-card">
-        <div class="diff-icon"><i class="fas fa-chart-line"></i></div>
-        <p><strong>30%</strong> de crescimento médio no faturamento anual</p>
+  <section id="diferenciais" class="section diferenciais">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Nossos Diferenciais</span>
+        <h2 class="section-title">Por que escolher a Ramos &amp; Queiróz?</h2>
+        <p class="section-subtitle">
+          Experiência prática, proximidade com o cliente e execução acelerada.
+        </p>
       </div>
-      <div class="diff-card">
-        <div class="diff-icon"><i class="fas fa-tachometer-alt"></i></div>
-        <p><strong>90%</strong> dos clientes atingem metas estabelecidas</p>
+      <!-- cards dos diferenciais continuam aqui -->
+    </div>
+  </section>
+
+  <!-- Cases -->
+  <section id="cases" class="section cases">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Cases de Sucesso</span>
+        <h2 class="section-title">Resultados que transformam negócios</h2>
+        <p class="section-subtitle">
+          Conheça histórias reais de crescimento exponencial com nossa consultoria.
+        </p>
       </div>
-      <div class="diff-card">
-        <div class="diff-icon"><i class="fas fa-hand-holding-usd"></i></div>
-        <p><strong>R$40</strong> de retorno para cada R$1 investido</p>
+      <!-- cards de case continuam aqui -->
+    </div>
+  </section>
+
+  <!-- Consultores -->
+  <section id="consultores" class="section consultores">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Nossa Equipe</span>
+        <h2 class="section-title">Liderança com experiência comprovada</h2>
+        <p class="section-subtitle">
+          Conheça os fundadores por trás da nossa metodologia transformadora.
+        </p>
       </div>
+      <!-- cards dos consultores continuam aqui -->
     </div>
   </section>
 
   <!-- Metodologia -->
-  <section id="metodologia" class="section metodologia container">
-    <h2 class="section-title">Etapas práticas para resultados extraordinários</h2>
-    <div class="meta-grid">
-      <div class="meta-step">
-        <h3>Diagnóstico</h3>
-        <p>Análise de dados e processos para identificar gaps.</p>
+  <section id="metodologia" class="section metodologia">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Nossa Metodologia</span>
+        <h2 class="section-title">Etapas práticas para resultados extraordinários</h2>
+        <p class="section-subtitle">
+          Diagnóstico, planejamento, execução ágil e melhoria contínua.
+        </p>
       </div>
-      <div class="meta-step">
-        <h3>Planejamento</h3>
-        <p>Definição de roadmap e KPIs alinhados aos objetivos.</p>
-      </div>
-      <div class="meta-step">
-        <h3>Execução Ágil</h3>
-        <p>Implementação contínua com squads dedicados.</p>
-      </div>
-      <div class="meta-step">
-        <h3>Melhoria Contínua</h3>
-        <p>Monitoramento e ajustes para escalar resultados.</p>
-      </div>
+      <!-- timeline ou etapas aqui -->
     </div>
   </section>
 
   <!-- Contato -->
-  <section id="contato" class="section contato container">
-    <h2 class="section-title">Fale com a gente</h2>
-    <form id="form-contato" class="form-contato" action="#" method="POST">
-      <input type="text" name="nome" placeholder="Seu nome completo" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <input type="tel" name="telefone" placeholder="Telefone" />
-      <textarea name="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+  <section id="contato" class="section contato">
+    <div class="container">
+      <div class="contato-content">
+        <div class="contato-info">
+          <h2>Fale com a gente</h2>
+          <p>Vamos entender seus desafios e propor soluções práticas.</p>
+          <button id="lead-whatsapp" class="btn btn-secondary">Falar no WhatsApp</button>
+        </div>
+        <div class="contato-form-container">
+          <form id="form-contato" method="POST" action="https://script.google.com/macros/s/AKfycbxCFjonTPYaDO5t7eloNdx5dimh8fCdGzq_OdS4gJwLJ2I6UmK5Od_9BDXz8yVzgieefg/exec" class="contato-form">
+            <div class="form-row">
+              <input type="text" name="nome" placeholder="Seu nome completo" required class="form-control full-width">
+            </div>
+            <div class="form-row">
+              <input type="email" name="email" placeholder="Seu e-mail" required class="form-control full-width">
+            </div>
+            <div class="form-row">
+              <input type="tel" name="telefone" placeholder="Telefone" class="form-control full-width">
+            </div>
+            <div class="form-row">
+              <input type="text" name="empresa" placeholder="Empresa" class="form-control full-width">
+            </div>
+            <div class="form-row">
+              <input type="text" name="cargo" placeholder="Cargo" class="form-control full-width">
+            </div>
+            <div class="form-row">
+              <textarea name="mensagem" rows="4" placeholder="Como podemos ajudar?" class="form-control full-width" required></textarea>
+            </div>
+            <div class="form-row">
+              <button type="submit" class="btn btn-primary full-width">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/5511999999999" class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
   <!-- Footer -->
-  <footer class="footer container">
-    <p>&copy; 2025 OQ Consultoria — Todos os direitos reservados.</p>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ramos &amp; Queiróz Consultoria — Vamos juntos fazer Brasil.</p>
+    </div>
   </footer>
 
   <!-- Scripts -->
   <script src="main.js"></script>
 </body>
 </html>
-```
