@@ -1,463 +1,183 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #f5f5f5;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramos & Queiróz Consultoria | Transformamos dados em resultados extraordinários</title>
+  <meta name="description" content="Consultoria especializada em transformação de processos, organização de dados e aceleração de startups. Aumento de 60% em vendas e 150% em qualidade operacional.">
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-/* Header */
-.header {
-  width: 100%;
-  padding: 20px 0;
-  position: fixed;
-  top: 0;
-  background: #ffffffcc;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.logo-accent {
-  color: #1e406e;
-}
-.nav-menu {
-  display: flex;
-  gap: 2rem;
-}
-.nav-link {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-.nav-link.active {
-  color: #1e406e;
-}
-.hamburger {
-  display: none; /* responsividade pode ativar em mobile */
-}
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-/* Hero */
-.hero {
-  position: relative;
-  padding-top: 100px;
-  padding-bottom: 60px;
-  background: url('hero-bg.jpg') no-repeat center center/cover;
-}
-.hero-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #0a1e3eaa, #1e406eAA);
-  z-index: 1;
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: white;
-}
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.9rem;
-  background: rgba(255,255,255,0.2);
-  padding: 6px 12px;
-  border-radius: 50px;
-}
-.hero-badge i {
-  margin-right: 8px;
-}
-.hero-title {
-  font-size: 2.5rem;
-  margin-top: 16px;
-}
-.hero-title .text-gradient {
-  background: linear-gradient(45deg, #fecd1a, #ff9f1c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.hero-subtitle {
-  margin-top: 16px;
-  font-size: 1.2rem;
-  max-width: 700px;
-}
-.hero-stats {
-  display: flex;
-  gap: 2rem;
-  margin-top: 24px;
-}
-.stat-item {
-  text-align: center;
-}
-.stat-number {
-  font-size: 2.2rem;
-  font-weight: 700;
-}
-.stat-label {
-  color: #ddd;
-  margin-top: 4px;
-}
-.hero-cta {
-  margin-top: 32px;
-  display: flex;
-  gap: 16px;
-}
-.btn {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 12px 24px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.btn-primary {
-  background: #1e406e;
-  color: #fff;
-}
-.btn-outline {
-  color: #fff;
-  border: 2px solid #fff;
-}
-.btn i {
-  margin-left: 8px;
-}
-.scroll-indicator {
-  margin-top: 60px;
-  text-align: center;
-}
-.scroll-arrow {
-  width: 24px;
-  height: 24px;
-  border-bottom: 4px solid #fff;
-  border-right: 4px solid #fff;
-  transform: rotate(45deg);
-  margin: 0 auto;
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-container container">
+      <a href="#" class="logo">
+        <span class="logo-text">R.<span class="logo-accent">O</span></span>
+        <span class="logo-subtitle">Consultoria</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="#inicio" class="nav-link active">Início</a></li>
+          <li class="nav-item"><a href="#sobre" class="nav-link">Sobre nós</a></li>
+          <li class="nav-item"><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+          <li class="nav-item"><a href="#cases" class="nav-link">Cases</a></li>
+          <li class="nav-item"><a href="#consultores" class="nav-link">Consultores</a></li>
+          <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-/* Seções */
-.section {
-  padding: 80px 0;
-  background: white;
-}
-.section:nth-child(even) {
-  background: #f9f9f9;
-}
-.section-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.section-badge {
-  display: block;
-  font-size: 0.9rem;
-  color: #1e406e;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 16px;
-}
-.section-subtitle {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto;
-}
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-background">
+      <div class="hero-pattern"></div>
+      <div class="hero-gradient"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-chart-line"></i>
+          <span>Resultados Comprovados</span>
+        </div>
+        <h1 class="hero-title">
+          Vamos juntos fazer Brasil<br />
+          <span class="text-gradient">Transformamos dados em resultados extraordinários</span>
+        </h1>
+        <p class="hero-subtitle">
+          Aumento de <strong>60% em vendas</strong> e <strong>150% em qualidade operacional</strong> 
+          com estratégias orientadas a dados e execução rápida.
+        </p>
+        <div class="hero-cta">
+          <a href="#contato" class="btn btn-primary">
+            <span>Fale com nossos especialistas</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Sobre Section -->
+<section id="sobre" class="section sobre">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Quem Somos</span>
+      <h2 class="section-title">Experiência real para desafios reais</h2>
+      <p class="section-subtitle">
+        Combinamos expertise operacional com análise de dados para transformar seu negócio com foco em resultados.
+      </p>
+    </div>
+    <!-- conteúdo sobre a empresa continua aqui -->
+  </div>
+</section>
 
-/* Sobre */
-.sobre-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-.text-block {
-  flex: 1;
-  min-width: 280px;
-}
-.text-block h3 {
-  margin-bottom: 12px;
-  color: #1e406e;
-}
-.text-block p {
-  margin-bottom: 16px;
-  color: #555;
-}
-.sobre-visual {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
-  gap: 24px;
-}
-.experience-card {
-  display: flex;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  align-items: center;
-}
-.experience-icon {
-  font-size: 1.8rem;
-  color: #1e406e;
-  margin-right: 16px;
-}
-.experience-content h4 {
-  margin-bottom: 8px;
-}
-.experience-content p {
-  font-size: 0.95rem;
-  color: #555;
-}
+<!-- Diferenciais -->
+<section id="diferenciais" class="section diferenciais">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Nossos Diferenciais</span>
+      <h2 class="section-title">Por que escolher a R.O Consultoria?</h2>
+      <p class="section-subtitle">
+        Experiência prática, proximidade com o cliente e execução acelerada.
+      </p>
+    </div>
+    <!-- cards dos diferenciais continuam aqui -->
+  </div>
+</section>
 
-/* Diferenciais */
-.diferenciais-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
-  gap: 24px;
-}
-.diferencial-card {
-  background: white;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-.diferencial-icon {
-  font-size: 2rem;
-  color: #1e406e;
-  margin-bottom: 16px;
-}
-.diferencial-title {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-.diferencial-description {
-  font-size: 0.95rem;
-  margin-bottom: 16px;
-}
-.diferencial-highlight {
-  color: #1e406e;
-  font-weight: 600;
-}
+<!-- Cases -->
+<section id="cases" class="section cases">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Cases de Sucesso</span>
+      <h2 class="section-title">Resultados que transformam negócios</h2>
+      <p class="section-subtitle">
+        Conheça histórias reais de crescimento exponencial com nossa consultoria.
+      </p>
+    </div>
+    <!-- cards de case continuam aqui -->
+  </div>
+</section>
 
-/* Cases */
-.cases-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-  gap: 24px;
-}
-.case-card {
-  background: white;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-.case-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-.case-icon {
-  font-size: 2rem;
-  color: #1e406e;
-}
-.case-result {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-.case-title {
-  margin-bottom: 12px;
-}
-.case-details {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 16px;
-}
-.case-metrics {
-  display: flex;
-  gap: 12px;
-}
-.metric {
-  background: #f1f1f1;
-  padding: 12px;
-  border-radius: 6px;
-  text-align: center;
-}
-.metric-value {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-.metric-label {
-  font-size: 0.85rem;
-  color: #777;
-}
+<!-- Consultores -->
+<section id="consultores" class="section consultores">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Nossa Equipe</span>
+      <h2 class="section-title">Liderança com experiência comprovada</h2>
+      <p class="section-subtitle">
+        Conheça os fundadores por trás da nossa metodologia transformadora.
+      </p>
+    </div>
+    <!-- cards dos consultores continuam aqui -->
+  </div>
+</section>
+<!-- Metodologia -->
+<section id="metodologia" class="section metodologia">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Nossa Metodologia</span>
+      <h2 class="section-title">Etapas práticas para resultados extraordinários</h2>
+      <p class="section-subtitle">
+        Diagnóstico, planejamento, execução ágil e melhoria contínua.
+      </p>
+    </div>
+    <!-- timeline ou etapas aqui -->
+  </div>
+</section>
 
-/* Consultores */
-.consultores-grid {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
-}
-.consultor-card {
-  background: white;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-.consultor-image {
-  position: relative;
-  margin-bottom: 16px;
-}
-.consultor-image .image-placeholder {
-  background: #eaeaea;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: #888;
-}
-.consultor-badge {
-  position: absolute;
-  bottom: -12px;
-  right: -12px;
-  background: #1e406e;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-}
-.consultor-content .consultor-name {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-.consultor-content .consultor-position {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 12px;
-}
-.skill-tag {
-  display: inline-block;
-  background: #f1f1f1;
-  color: #333;
-  padding: 6px 12px;
-  border-radius: 20px;
-  margin-right: 8px;
-  margin-bottom: 8px;
-  font-size: 0.85rem;
-}
+<!-- Contato -->
+<section id="contato" class="section contato">
+  <div class="container">
+    <div class="contato-content">
+      <div class="contato-info">
+        <h2>Fale com a gente</h2>
+        <p>Vamos entender seus desafios e propor soluções práticas.</p>
+        <button id="lead-whatsapp" class="btn btn-secondary">Falar no WhatsApp</button>
+      </div>
 
-/* Contato */
-.contato {
-  background: #f9f9f9;
-}
-.contato-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-.contato-info {
-  flex: 1;
-  min-width: 300px;
-}
-.contact-benefits {
-  margin-top: 24px;
-}
-.benefit-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-}
-.benefit-item i {
-  color: #1e406e;
-  margin-right: 12px;
-}
-.full-width {
-  width: 100%;
-}
+      <div class="contato-form-container">
+        <form id="form-contato">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+          <input type="tel" name="telefone" placeholder="Telefone" />
+          <textarea name="mensagem" placeholder="Como podemos ajudar?" rows="4"></textarea>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-/* Footer */
-.footer {
-  background: #1e406e;
-  color: white;
-  padding: 40px 0;
-}
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-.footer-brand {
-  flex: 1;
-  min-width: 280px;
-}
-.footer-description {
-  margin: 16px 0;
-}
-.social-links {
-  display: flex;
-  gap: 12px;
-}
-.social-link {
-  color: white;
-  font-size: 1.2rem;
-}
+<!-- WhatsApp Flutuante -->
+<a href="https://wa.me/5511999999999" class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-/* WhatsApp floating button */
-.whatsapp-button {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background: #25d366;
-  color: white;
-  font-size: 1.5rem;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  z-index: 1000;
-}
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 R.O Consultoria — Vamos juntos fazer Brasil.</p>
+  </div>
+</footer>
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .hero-stats {
-    flex-direction: column;
-    gap: 12px;
-  }
-  .contato-content {
-    flex-direction: column;
-  }
-  .diferenciais-grid, .cases-grid, .consultores-grid {
-    grid-template-columns: 1fr;
-  }
-  .nav-menu {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
-}
-
-
+<!-- Scripts -->
+<script src="main.js"></script>
+</body>
+</html>
 
