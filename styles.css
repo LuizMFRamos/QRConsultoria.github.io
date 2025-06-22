@@ -969,8 +969,15 @@ a:hover {
   border-radius: var(--border-radius-xl);
   padding: var(--space-8);
   box-shadow: var(--shadow-2xl);
+    flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.contato-form {
+  width: 100%;
+  max-width: 480px;
+}
 .form-header {
   margin-bottom: var(--space-8);
   text-align: center;
