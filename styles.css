@@ -667,7 +667,9 @@ a:hover {
   font-size: var(--font-size-sm);
   color: var(--gray-500);
 }
-
+.brasil-amarelo {
+  color: #FFD600; /* amarelo vivo, pode usar yellow se quiser mais forte */
+}
 /* Consultores Section */
 .consultores-grid {
   display: grid;
