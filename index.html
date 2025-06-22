@@ -152,13 +152,30 @@
       </div>
 
       <div class="contato-form-container">
-        <form id="form-contato">
-          <input type="text" name="nome" placeholder="Seu nome" required />
-          <input type="email" name="email" placeholder="Seu e-mail" required />
-          <input type="tel" name="telefone" placeholder="Telefone" />
-          <textarea name="mensagem" placeholder="Como podemos ajudar?" rows="4"></textarea>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+   <form id="form-contato" method="POST" action="https://script.google.com/macros/s/AKfycbxCFjonTPYaDO5t7eloNdx5dimh8fCdGzq_OdS4gJwLJ2I6UmK5Od_9BDXz8yVzgieefg/exec" class="contato-form">
+  <div class="form-row">
+    <input type="text" name="nome" placeholder="Seu nome completo" required class="form-control full-width">
+  </div>
+  <div class="form-row">
+    <input type="email" name="email" placeholder="Seu e-mail" required class="form-control full-width">
+  </div>
+  <div class="form-row">
+    <input type="tel" name="telefone" placeholder="Telefone" class="form-control full-width">
+  </div>
+  <div class="form-row">
+    <input type="text" name="empresa" placeholder="Empresa" class="form-control full-width">
+  </div>
+  <div class="form-row">
+    <input type="text" name="cargo" placeholder="Cargo" class="form-control full-width">
+  </div>
+  <div class="form-row">
+    <textarea name="mensagem" rows="4" placeholder="Como podemos ajudar?" class="form-control full-width" required></textarea>
+  </div>
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary full-width">Enviar</button>
+  </div>
+</form>
+
       </div>
     </div>
   </div>
