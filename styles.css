@@ -21,11 +21,14 @@
   --gray-800: #1e293b;
   --gray-900: #0f172a;
 
-  /* Gradientes */
-  --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
-  --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-  --gradient-text: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-light) 100%);
+:root {
+  /* Gradientes substituídos por branco */
+  --gradient-primary: #ffffff;
+  --gradient-secondary: #ffffff;
+  --gradient-hero: #ffffff;
+  --gradient-text: #ffffff;
+}
+
 
   /* Sombras */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
